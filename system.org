@@ -15,6 +15,11 @@ Assumes home folder is ~/home/ren/~ and backup copy of the home folder is availa
   rclone copy /media/ren/fullBackup/ren/ /home/ren/ --progress
 #+end_src
 ** (later) Set up remote drive
+Run the following command and follow instructions on
+https://rclone.org/drive/#configuration
+#+begin_src bash
+  rclone config
+#+end_src
 * Step 2: Bitwarden and Firefox
 Restore access to all internet resources, which may be locked behind an account.
 ** Install bitwarden
@@ -123,12 +128,10 @@ see [[file:.bashrc][.bashrc]] for setup
 see [[file:.profile][.profile]] for alias
 ** snap
 #+begin_src bash
-  sudo snap install btop cheat chromium gdu gimp libreoffice mpv slack tldr yt-dlp zotero-snap
+  sudo snap install btop chromium gdu gimp libreoffice mpv slack tldr yt-dlp zotero-snap
 #+end_src
 *** btop
 better system monitor
-*** cheat
-custom cheat sheets
 *** chromium
 alternative browser
 *** gdu-disk-usage-analyzer
