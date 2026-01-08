@@ -89,6 +89,14 @@ Run ~M-x nerd-icons-install-fonts~.
 #+end_src
 Follow instructions on
 https://julialang.org/downloads/
+Put the following into `~/.julia/config/startup.jl` to auto-active envirments.
+#+begin_src julia
+  import Pkg
+
+  if isfile("Project.toml")
+      Pkg.activate(".")
+  end
+#+end_src
 ** Install latex
 #+begin_src bash
   sudo apt install texlive texlive-science texlive-pictures texlive-latex-extra texlive-fonts-extra texlive-bibtex-extra biber bibtool
@@ -162,6 +170,8 @@ Set citation key formula in "Edit" -> "Settings" -> "Better Bibtex" to
 - ~authIni(n=1,sep='') > 2~ checks whether there are more than two authors
 - ~authorsn~ is the last name of all authors
 - ~year~ inserts the year
+
+Set datafolder to ~~/zotero~
 ** flatpak
 Install flatpaks and register flathub
 #+begin_src bash
@@ -188,6 +198,11 @@ If unable to find shared object files:
   visualize(G, backend=:graphviz)
 #+end_src
 * Extras
+** libation
+For backing up audible audiobooks
+#+begin_src bash
+  snap install libation
+#+end_src
 ** BambuStudio
 For 3d printing
 #+begin_src
@@ -198,6 +213,11 @@ https://www.synaptics.com/products/displaylink-graphics/downloads/ubuntu
 ** steam
 #+begin_src bash
   sudo snap install steam
+#+end_src
+** imagemagick
+For image conversions
+#+begin_src bash
+  sudo apt install imagemagick
 #+end_src
 ** lutris
 #+begin_src bash
